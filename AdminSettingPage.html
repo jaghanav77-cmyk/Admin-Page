@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Admin settings page for managing application settings and audit logs"
+    >
+
+    <title>Admin Settings Page</title>
+</head>
+
+<body>
+
+    <!-- Main page heading -->
+    <header>
+        <h1>Admin Settings Page</h1>
+    </header>
+
+
+    <!-- Sidebar -->
+    <aside>
+
+        <h2>Admin Panel</h2>
+
+        <nav>
+            <ul>
+                <li>
+                    <a href="#dashboard">Dashboard</a>
+                </li>
+
+                <li>
+                    <a href="#users">Users</a>
+                </li>
+
+                <li>
+                    <a href="#roles">Roles &amp; Permissions</a>
+                </li>
+
+                <li>
+                    <a href="#settings">Settings</a>
+                </li>
+
+                <li>
+                    <a href="#audit-logs">Audit Logs</a>
+                </li>
+            </ul>
+        </nav>
+
+    </aside>
+
+
+    <!-- Main content -->
+    <main id="settings">
+
+        <!-- Page heading -->
+        <section>
+            <h2>Settings</h2>
+
+            <p>
+                Manage your admin panel settings from this page.
+            </p>
+        </section>
+
+
+        <!-- Settings tabs -->
+        <section>
+
+            <h3>Settings Tabs</h3>
+
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#general">General</a>
+                    </li>
+
+                    <li>
+                        <a href="#account">Account</a>
+                    </li>
+
+                    <li>
+                        <a href="#security">Security</a>
+                    </li>
+
+                    <li>
+                        <a href="#notifications">Notifications</a>
+                    </li>
+                </ul>
+            </nav>
+
+        </section>
+
+
+        <!-- General settings form -->
+        <section id="general">
+
+            <h3>General Settings</h3>
+
+            <form action="#" method="post">
+
+                <!-- Site Name -->
+                <div>
+                    <label for="site-name">Site Name</label>
+
+                    <input
+                        type="text"
+                        id="site-name"
+                        name="site_name"
+                        placeholder="Enter site name"
+                        required
+                    >
+                </div>
+
+
+                <!-- Admin Email -->
+                <div>
+                    <label for="admin-email">Admin Email</label>
+
+                    <input
+                        type="email"
+                        id="admin-email"
+                        name="admin_email"
+                        placeholder="admin@example.com"
+                        required
+                    >
+                </div>
+
+
+                <!-- Language -->
+                <div>
+                    <label for="language">Language</label>
+
+                    <select id="language" name="language" required>
+
+                        <option value="">
+                            Select Language
+                        </option>
+
+                        <option value="english">
+                            English
+                        </option>
+
+                        <option value="tamil">
+                            Tamil
+                        </option>
+
+                        <option value="hindi">
+                            Hindi
+                        </option>
+
+                    </select>
+                </div>
+
+
+                <!-- Time Zone -->
+                <div>
+                    <label for="timezone">Time Zone</label>
+
+                    <select id="timezone" name="timezone" required>
+
+                        <option value="">
+                            Select Time Zone
+                        </option>
+
+                        <option value="ist">
+                            India Standard Time
+                        </option>
+
+                        <option value="utc">
+                            Coordinated Universal Time
+                        </option>
+
+                        <option value="est">
+                            Eastern Standard Time
+                        </option>
+
+                    </select>
+                </div>
+
+
+                <!-- Save button -->
+                <div>
+                    <button type="submit">
+                        Save Changes
+                    </button>
+                </div>
+
+            </form>
+
+        </section>
+
+
+        <!-- Account settings -->
+        <section id="account">
+
+            <h3>Account Settings</h3>
+
+            <p>
+                Manage administrator account information.
+            </p>
+
+        </section>
+
+
+        <!-- Security settings -->
+        <section id="security">
+
+            <h3>Security Settings</h3>
+
+            <p>
+                Manage password and security settings.
+            </p>
+
+        </section>
+
+
+        <!-- Notification settings -->
+        <section id="notifications">
+
+            <h3>Notification Settings</h3>
+
+            <fieldset>
+
+                <legend>
+                    Notification Preferences
+                </legend>
+
+                <div>
+                    <input
+                        type="checkbox"
+                        id="email-notifications"
+                        name="notifications"
+                        value="email"
+                    >
+
+                    <label for="email-notifications">
+                        Email Notifications
+                    </label>
+                </div>
+
+
+                <div>
+                    <input
+                        type="checkbox"
+                        id="security-alerts"
+                        name="notifications"
+                        value="security"
+                        checked
+                    >
+
+                    <label for="security-alerts">
+                        Security Alerts
+                    </label>
+                </div>
+
+
+                <div>
+                    <input
+                        type="checkbox"
+                        id="system-updates"
+                        name="notifications"
+                        value="system"
+                    >
+
+                    <label for="system-updates">
+                        System Updates
+                    </label>
+                </div>
+
+            </fieldset>
+
+        </section>
+
+
+        <!-- Audit log -->
+        <section id="audit-logs">
+
+            <h3>Audit Logs</h3>
+
+            <p>
+                Recent activities performed by administrators.
+            </p>
+
+
+            <table>
+
+                <caption>
+                    Recent Admin Activities
+                </caption>
+
+                <thead>
+                    <tr>
+                        <th>Date &amp; Time</th>
+                        <th>User</th>
+                        <th>Action</th>
+                        <th>Module</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+
+
+                <tbody>
+
+                    <tr>
+                        <td>11-Aug-2026 09:30 AM</td>
+                        <td>Admin</td>
+                        <td>Updated Settings</td>
+                        <td>General</td>
+                        <td>Success</td>
+                    </tr>
+
+                    <tr>
+                        <td>11-Aug-2026 09:15 AM</td>
+                        <td>Admin</td>
+                        <td>Changed Password</td>
+                        <td>Security</td>
+                        <td>Success</td>
+                    </tr>
+
+                    <tr>
+                        <td>10-Aug-2026 05:20 PM</td>
+                        <td>Manager</td>
+                        <td>Updated Notifications</td>
+                        <td>Notifications</td>
+                        <td>Success</td>
+                    </tr>
+
+                    <tr>
+                        <td>10-Aug-2026 04:10 PM</td>
+                        <td>Admin</td>
+                        <td>Updated User Role</td>
+                        <td>Users</td>
+                        <td>Success</td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+        <p>
+            <!-- &copy; 2026 Admin Panel -->
+        </p>
+    </footer>
+
+</body>
+
+</html>
+```
