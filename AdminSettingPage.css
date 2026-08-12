@@ -1,0 +1,390 @@
+/* Basic page style */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+    color: #333;
+}
+
+
+/* Common colors and spacing */
+
+:root {
+    --blue: #2563eb;
+    --dark: #1f2937;
+    --white: #ffffff;
+    --border: #ddd;
+    --space: 20px;
+}
+
+
+/* Mobile menu button */
+
+#menu-button {
+    display: none;
+}
+
+.menu-icon {
+    display: none;
+}
+
+
+/* Header */
+
+header {
+    margin-left: 230px;
+    background-color: var(--white);
+    padding: var(--space);
+    border-bottom: 1px solid var(--border);
+}
+
+header h1 {
+    margin: 0;
+}
+
+
+/* Sidebar */
+
+aside {
+    width: 230px;
+    height: 100vh;
+
+    background-color: var(--dark);
+
+    padding: var(--space);
+
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+aside h2 {
+    color: var(--white);
+}
+
+aside ul {
+    list-style: none;
+    padding: 0;
+}
+
+aside li {
+    margin-bottom: 10px;
+}
+
+aside a {
+    display: block;
+
+    padding: 10px;
+
+    color: var(--white);
+    text-decoration: none;
+
+    border-radius: 5px;
+}
+
+aside a:hover {
+    background-color: var(--blue);
+}
+
+aside a:focus {
+    outline: 2px solid #93c5fd;
+}
+
+
+/* Main content */
+
+main {
+    margin-left: 230px;
+    padding: var(--space);
+}
+
+
+/* Sections */
+
+section {
+    background-color: var(--white);
+
+    padding: var(--space);
+    margin-bottom: var(--space);
+
+    border: 1px solid var(--border);
+    border-radius: 6px;
+}
+
+h2,
+h3 {
+    margin-top: 0;
+}
+
+
+/* Settings tabs */
+
+section nav ul {
+    display: flex;
+    gap: 10px;
+
+    list-style: none;
+    padding: 0;
+}
+
+section nav a {
+    display: block;
+
+    padding: 8px 15px;
+
+    background-color: #eee;
+    color: #333;
+
+    text-decoration: none;
+
+    border-radius: 5px;
+}
+
+section nav a:hover {
+    background-color: var(--blue);
+    color: white;
+}
+
+section nav a:focus {
+    outline: 2px solid #93c5fd;
+}
+
+
+/* Form */
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+form div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+label {
+    font-weight: bold;
+}
+
+
+/* Input fields */
+
+input,
+select {
+    padding: 10px;
+
+    border: 1px solid var(--border);
+    border-radius: 5px;
+
+    font-size: 15px;
+}
+
+input:focus,
+select:focus {
+    outline: 2px solid var(--blue);
+}
+
+input:invalid,
+select:invalid {
+    border-color: red;
+}
+
+
+/* Save button */
+
+button {
+    width: fit-content;
+
+    padding: 10px 20px;
+
+    background-color: var(--blue);
+    color: white;
+
+    border: none;
+    border-radius: 5px;
+
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #1d4ed8;
+}
+
+button:focus {
+    outline: 2px solid #93c5fd;
+}
+
+
+/* Notifications */
+
+fieldset {
+    border: 1px solid var(--border);
+    padding: 15px;
+}
+
+fieldset div {
+    margin-bottom: 10px;
+}
+
+
+/* Audit table */
+
+table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    margin-top: 15px;
+}
+
+caption {
+    text-align: left;
+    font-weight: bold;
+
+    margin-bottom: 10px;
+}
+
+th,
+td {
+    padding: 12px;
+
+    border: 1px solid var(--border);
+
+    text-align: left;
+}
+
+th {
+    background-color: #eee;
+}
+
+tbody tr:hover {
+    background-color: #f8f8f8;
+}
+
+
+/* Footer */
+
+footer {
+    margin-left: 230px;
+
+    padding: var(--space);
+
+    text-align: center;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+
+    aside {
+        width: 190px;
+    }
+
+    header {
+        margin-left: 190px;
+    }
+
+    main {
+        margin-left: 190px;
+    }
+
+    footer {
+        margin-left: 190px;
+    }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    /* Header */
+
+    header {
+        margin-left: 0;
+
+        display: flex;
+        align-items: center;
+
+        gap: 15px;
+
+        padding: 15px;
+    }
+
+
+    /* Show menu icon */
+
+    .menu-icon {
+        display: block;
+
+        font-size: 25px;
+
+        cursor: pointer;
+    }
+
+
+    /* Sidebar */
+
+    aside {
+        width: 230px;
+        height: 100vh;
+
+        position: fixed;
+
+        top: 0;
+        left: -230px;
+
+        background-color: var(--dark);
+
+        transition: 0.3s;
+    }
+
+
+    /* Open sidebar */
+
+    #menu-button:checked ~ aside {
+        left: 0;
+    }
+
+
+    /* Main */
+
+    main {
+        margin-left: 0;
+        padding: 15px;
+    }
+
+
+    /* Footer */
+
+    footer {
+        margin-left: 0;
+    }
+
+
+    /* Tabs */
+
+    section nav ul {
+        flex-direction: column;
+    }
+
+
+    /* Table */
+
+    table {
+        display: block;
+        overflow-x: auto;
+    }
+}
