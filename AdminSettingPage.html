@@ -6,245 +6,727 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta
-        name="description"
-        content="Admin settings page for managing application settings and audit logs"
-    >
+    <meta name="description"
+        content="Admin settings page for managing users, roles, settings and audit logs">
 
-    <title>Admin Settings Page</title>
+    <title>Admin Settings</title>
 
     <link rel="stylesheet" href="AdminSettingPage.css">
 </head>
 
 <body>
 
-    <!-- Mobile menu button -->
-     
     <input type="checkbox" id="menu-button">
 
-    <aside>
+    <aside id="sidebar">
 
-        <h2>Admin Panel</h2>
+        <div class="sidebar-header">
+            <h2>Admin Panel</h2>
+        </div>
 
-        <nav>
+        <nav aria-label="Admin navigation">
+
             <ul>
-                <li><a href="#">Dashboard</a></li>
-                <li><a href="#">Users</a></li>
-                <li><a href="#">Roles & Permissions</a></li>
-                <li><a href="#">Settings</a></li>
-                <li><a href="#">Audit Logs</a></li>
+
+                <li>
+                    <a href="#" id="dashboard-link">
+                        Dashboard
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#" id="users-link">
+                        Users
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#" id="roles-link">
+                        Roles & Permissions
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#settings" id="settings-link">
+                        Settings
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#audit-logs" id="audit-link">
+                        Audit Logs
+                    </a>
+                </li>
+
             </ul>
+
         </nav>
 
     </aside>
 
 
-    <!-- Page Header -->
-
     <header>
 
-        <h1>Admin Settings Page</h1>
+        <div class="header-left">
 
-    <label for="menu-button" class="menu-icon">
-        ☰
-    </label>
+            <label for="menu-button" class="menu-icon">
+                ☰
+            </label>
+
+            <div>
+                <h1>Admin Settings</h1>
+
+                <p>
+                    Manage your admin panel settings
+                </p>
+            </div>
+
+        </div>
+
+        <div class="header-right">
+
+            <button type="button" id="theme-button">
+                Change Theme
+            </button>
+
+        </div>
 
     </header>
 
 
-    <!-- Main Content -->
-
     <main>
 
-        <!-- Settings Tabs -->
+        <section id="dashboard-section" class="page-section">
 
-        <section>
+            <div class="section-heading">
 
-            <h2>Settings</h2>
+                <h2>Dashboard</h2>
 
-            <nav>
+                <p>
+                    Welcome to the Admin Panel dashboard.
+                </p>
+
+            </div>
+
+            <div class="card-container">
+
+                <article class="card">
+
+                    <h3>Total Users</h3>
+
+                    <p class="card-number">
+                        120
+                    </p>
+
+                    <p>
+                        Active users in the system
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h3>Active Roles</h3>
+
+                    <p class="card-number">
+                        8
+                    </p>
+
+                    <p>
+                        Roles currently available
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h3>Recent Activities</h3>
+
+                    <p class="card-number">
+                        24
+                    </p>
+
+                    <p>
+                        Activities recorded today
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <section id="users-section" class="page-section">
+
+            <div class="section-heading">
+
+                <h2>Users</h2>
+
+                <p>
+                    Manage users in the admin panel.
+                </p>
+
+            </div>
+
+            <div class="card-container">
+
+                <article class="card">
+
+                    <h3>Admin Users</h3>
+
+                    <p>
+                        5 administrators currently have access.
+                    </p>
+
+                    <button type="button" class="section-button">
+                        Manage Users
+                    </button>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h3>Active Users</h3>
+
+                    <p>
+                        120 users are currently active.
+                    </p>
+
+                    <button type="button" class="section-button">
+                        View Users
+                    </button>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <section id="roles-section" class="page-section">
+
+            <div class="section-heading">
+
+                <h2>Roles & Permissions</h2>
+
+                <p>
+                    Manage roles and permissions for users.
+                </p>
+
+            </div>
+
+            <div class="role-list">
+
+                <article class="role-card">
+
+                    <h3>Administrator</h3>
+
+                    <p>
+                        Full access to the admin panel.
+                    </p>
+
+                    <ul>
+                        <li>Manage Users</li>
+                        <li>Manage Settings</li>
+                        <li>View Audit Logs</li>
+                    </ul>
+
+                </article>
+
+
+                <article class="role-card">
+
+                    <h3>Manager</h3>
+
+                    <p>
+                        Access to users and reports.
+                    </p>
+
+                    <ul>
+                        <li>View Users</li>
+                        <li>Manage Users</li>
+                        <li>View Reports</li>
+                    </ul>
+
+                </article>
+
+
+                <article class="role-card">
+
+                    <h3>Employee</h3>
+
+                    <p>
+                        Basic access to the system.
+                    </p>
+
+                    <ul>
+                        <li>View Profile</li>
+                        <li>View Dashboard</li>
+                    </ul>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <section id="settings" class="page-section">
+
+            <div class="section-heading">
+
+                <h2>Settings</h2>
+
+                <p>
+                    Manage your application settings.
+                </p>
+
+            </div>
+
+
+            <nav class="settings-tabs" aria-label="Settings navigation">
+
                 <ul>
-                    <li><a href="#">General</a></li>
-                    <li><a href="#">Account</a></li>
-                    <li><a href="#">Security</a></li>
-                    <li><a href="#">Notifications</a></li>
+
+                    <li>
+                        <a href="#" id="general-tab" class="active">
+                            General
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" id="account-tab">
+                            Account
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" id="security-tab">
+                            Security
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" id="notification-tab">
+                            Notifications
+                        </a>
+                    </li>
+
                 </ul>
+
             </nav>
 
-        </section>
+
+            <div id="general-content" class="tab-content active">
+
+                <h3>General Settings</h3>
+
+                <form id="settings-form">
+
+                    <div class="form-group">
+
+                        <label for="site-name">
+                            Site Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="site-name"
+                            name="site-name"
+                            value="Admin Portal"
+                            placeholder="Enter site name"
+                            required
+                        >
+
+                    </div>
 
 
-        <!-- Settings Form -->
+                    <div class="form-group">
 
-        <section>
+                        <label for="admin-email">
+                            Admin Email
+                        </label>
 
-            <h2>General Settings</h2>
+                        <input
+                            type="email"
+                            id="admin-email"
+                            name="admin-email"
+                            value="admin@example.com"
+                            placeholder="Enter admin email"
+                            required
+                        >
 
-            <form action="#" method="post">
+                    </div>
 
-                <div>
-                    <label for="site-name">Site Name</label>
+
+                    <div class="form-group">
+
+                        <label for="language">
+                            Language
+                        </label>
+
+                        <select id="language" name="language">
+
+                            <option value="english">
+                                English
+                            </option>
+
+                            <option value="tamil">
+                                Tamil
+                            </option>
+
+                            <option value="hindi">
+                                Hindi
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="timezone">
+                            Time Zone
+                        </label>
+
+                        <select id="timezone" name="timezone">
+
+                            <option value="india">
+                                India Standard Time
+                            </option>
+
+                            <option value="utc">
+                                UTC
+                            </option>
+
+                            <option value="usa">
+                                US Eastern Time
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <button type="submit" class="save-button">
+                        Save Changes
+                    </button>
+
+                </form>
+
+            </div>
+
+
+            <div id="account-content" class="tab-content">
+
+                <h3>Account Settings</h3>
+
+                <p>
+                    Manage your administrator account information.
+                </p>
+
+                <div class="form-group">
+
+                    <label for="account-name">
+                        Account Name
+                    </label>
+
                     <input
                         type="text"
-                        id="site-name"
-                        name="site-name"
-                        value="Admin Portal"
-                        required
+                        id="account-name"
+                        value="Administrator"
                     >
+
                 </div>
 
-                <div>
-                    <label for="admin-email">Admin Email</label>
+
+                <div class="form-group">
+
+                    <label for="account-phone">
+                        Phone Number
+                    </label>
+
                     <input
-                        type="email"
-                        id="admin-email"
-                        name="admin-email"
-                        value="admin@example.com"
-                        required
+                        type="tel"
+                        id="account-phone"
+                        placeholder="Enter phone number"
                     >
+
                 </div>
 
-                <div>
-                    <label for="language">Language</label>
 
-                    <select id="language" name="language">
-
-                        <option value="english">English</option>
-                        <option value="tamil">Tamil</option>
-
-                    </select>
-                </div>
-
-                <div>
-                    <label for="timezone">Time Zone</label>
-
-                    <select id="timezone" name="timezone">
-
-                        <option value="india">
-                            India Standard Time
-                        </option>
-
-                        <option value="utc">
-                            UTC
-                        </option>
-
-                    </select>
-                </div>
-
-                <button type="submit">
-                    Save Changes
+                <button
+                    type="button"
+                    class="save-button"
+                    id="account-save-button"
+                >
+                    Save Account
                 </button>
 
-            </form>
+            </div>
+
+
+            <div id="security-content" class="tab-content">
+
+                <h3>Security Settings</h3>
+
+                <fieldset>
+
+                    <legend>
+                        Security Options
+                    </legend>
+
+                    <div class="checkbox-group">
+
+                        <input type="checkbox" id="two-factor">
+
+                        <label for="two-factor">
+                            Enable two-factor authentication
+                        </label>
+
+                    </div>
+
+
+                    <div class="checkbox-group">
+
+                        <input type="checkbox" id="login-alert">
+
+                        <label for="login-alert">
+                            Send an alert for new login
+                        </label>
+
+                    </div>
+
+
+                    <div class="checkbox-group">
+
+                        <input type="checkbox" id="password-expiry">
+
+                        <label for="password-expiry">
+                            Enable password expiry
+                        </label>
+
+                    </div>
+
+                </fieldset>
+
+
+                <button
+                    type="button"
+                    class="save-button"
+                    id="security-save-button"
+                >
+                    Save Security Settings
+                </button>
+
+            </div>
+
+
+            <div id="notification-content" class="tab-content">
+
+                <h3>Notification Settings</h3>
+
+                <fieldset>
+
+                    <legend>
+                        Notification Preferences
+                    </legend>
+
+                    <div class="checkbox-group">
+
+                        <input
+                            type="checkbox"
+                            id="email-notification"
+                            checked
+                        >
+
+                        <label for="email-notification">
+                            Email Notifications
+                        </label>
+
+                    </div>
+
+
+                    <div class="checkbox-group">
+
+                        <input
+                            type="checkbox"
+                            id="system-notification"
+                            checked
+                        >
+
+                        <label for="system-notification">
+                            System Notifications
+                        </label>
+
+                    </div>
+
+
+                    <div class="checkbox-group">
+
+                        <input
+                            type="checkbox"
+                            id="security-notification"
+                            checked
+                        >
+
+                        <label for="security-notification">
+                            Security Notifications
+                        </label>
+
+                    </div>
+
+                </fieldset>
+
+
+                <button
+                    type="button"
+                    class="save-button"
+                    id="notification-save-button"
+                >
+                    Save Notification Settings
+                </button>
+
+            </div>
 
         </section>
 
 
-        <!-- Notification Settings -->
+        <section id="audit-logs" class="page-section">
 
-        <section>
+            <div class="section-heading">
 
-            <h2>Notifications</h2>
+                <h2>Audit Logs</h2>
 
-            <fieldset>
+                <p>
+                    View recent activities performed by users.
+                </p>
 
-                <legend>Notification Preferences</legend>
-
-                <div>
-                    <input
-                        type="checkbox"
-                        id="email-notification"
-                        name="email-notification"
-                    >
-
-                    <label for="email-notification">
-                        Email Notifications
-                    </label>
-                </div>
-
-                <div>
-                    <input
-                        type="checkbox"
-                        id="system-notification"
-                        name="system-notification"
-                    >
-
-                    <label for="system-notification">
-                        System Notifications
-                    </label>
-                </div>
-
-            </fieldset>
-
-        </section>
+            </div>
 
 
-        <!-- Audit Log -->
+            <div class="filter-area">
 
-        <section>
+                <label for="audit-filter">
+                    Filter Logs
+                </label>
 
-            <h2>Audit Logs</h2>
+                <select id="audit-filter">
 
-            <table>
+                    <option value="all">
+                        All
+                    </option>
 
-                <caption>
-                    Recent Admin Activities
-                </caption>
+                    <option value="success">
+                        Success
+                    </option>
 
-                <thead>
+                    <option value="failed">
+                        Failed
+                    </option>
 
-                    <tr>
-                        <th>Date & Time</th>
-                        <th>User</th>
-                        <th>Action</th>
-                        <th>Module</th>
-                        <th>Status</th>
-                    </tr>
+                </select>
 
-                </thead>
+            </div>
 
-                <tbody>
 
-                    <tr>
-                        <td>12 Aug 2026, 10:30 AM</td>
-                        <td>Admin</td>
-                        <td>Updated Settings</td>
-                        <td>Settings</td>
-                        <td>Success</td>
-                    </tr>
+            <div class="table-container">
 
-                    <tr>
-                        <td>12 Aug 2026, 09:45 AM</td>
-                        <td>Manager</td>
-                        <td>Changed User Role</td>
-                        <td>Users</td>
-                        <td>Success</td>
-                    </tr>
+                <table>
 
-                    <tr>
-                        <td>11 Aug 2026, 04:20 PM</td>
-                        <td>Admin</td>
-                        <td>Updated Security</td>
-                        <td>Security</td>
-                        <td>Success</td>
-                    </tr>
+                    <caption>
+                        Recent Admin Activities
+                    </caption>
 
-                </tbody>
+                    <thead>
 
-            </table>
+                        <tr>
+
+                            <th scope="col">
+                                Date & Time
+                            </th>
+
+                            <th scope="col">
+                                User
+                            </th>
+
+                            <th scope="col">
+                                Action
+                            </th>
+
+                            <th scope="col">
+                                Module
+                            </th>
+
+                            <th scope="col">
+                                Status
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="audit-table"></tbody>
+
+                </table>
+
+            </div>
 
         </section>
 
     </main>
 
 
-    <!-- Footer -->
+    <div
+        id="confirmation-modal"
+        class="modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modal-heading"
+    >
+
+        <div class="modal-content">
+
+            <h2 id="modal-heading">
+                Confirm Changes
+            </h2>
+
+            <p>
+                Are you sure you want to save these settings?
+            </p>
+
+            <div class="modal-buttons">
+
+                <button type="button" id="confirm-button">
+                    Yes, Save
+                </button>
+
+                <button type="button" id="cancel-button">
+                    Cancel
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
 
     <footer>
 
-        <p>Admin Panel</p>
+        <p>
+            Admin Panel
+        </p>
 
     </footer>
+
+
+    <script src="AdminSettingPage.js"></script>
 
 </body>
 
